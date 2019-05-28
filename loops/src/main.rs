@@ -3,6 +3,7 @@ fn main() {
     breakreturns();
     iter_func();
     liftoff(10);
+    println!("50.0F is {}C", far_to_cel(50.0));
 }
 
 
@@ -34,4 +35,8 @@ fn liftoff(start:u8) {
         }
     }
     println!("LIFTOFF!!!");
+}
+
+fn far_to_cel(far:f32) -> f32 {
+    (far - 32.0) * (5.0/9.0)
 }
