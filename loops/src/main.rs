@@ -4,6 +4,7 @@ fn main() {
     iter_func();
     liftoff(10);
     println!("50.0F is {}C", far_to_cel(50.0));
+    println!("fibonacci(27) = {}", fibonacci(27));
 }
 
 
@@ -39,4 +40,13 @@ fn liftoff(start:u8) {
 
 fn far_to_cel(far:f32) -> f32 {
     (far - 32.0) * (5.0/9.0)
+}
+
+
+fn fibonacci(n:u64) -> u64 {
+    match n {
+        0 => 0,
+        1 => 1,
+        n => fibonacci(n-1) + fibonacci(n-2)
+    }
 }
