@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "branches",
+    "guessing_game",
+    "loops",
+    "variables",
+]
