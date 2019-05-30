@@ -8,4 +8,5 @@ fn main() {
 
     let mut writer = BufWriter::new(stdout.lock());
     say(out, width, &mut writer).unwrap();
+    say(b"OK! done.", width, &mut writer).unwrap();
 }
