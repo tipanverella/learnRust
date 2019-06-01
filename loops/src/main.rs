@@ -1,12 +1,28 @@
+use f64;
+
 fn main() {
     println!("Hello, world!");
     breakreturns();
     iter_func();
     liftoff(10);
     println!("50.0F is {}C", far_to_cel(50.0));
-    println!("fibonacci(27) = {}", fibonacci(27));
+    println!("fibonacci(5) = {}", fibonacci(5));
+    println!("sqrt(10000.0) = {}", sqrt(10000.0));
 }
 
+fn sqrt(x:f64) -> f64 {
+    let ans : f64 = if x <= 0.0 {
+        0.0
+        }
+        else {
+            let mut _guess : f64 = x/2.0;
+            for _k in 1..100 {
+                _guess = _guess - (_guess * _guess - x) / (2.0 * _guess);
+            }
+            _guess
+        };
+    ans
+}
 
 fn breakreturns(){
     let mut counter : u8 = 0;
@@ -50,3 +66,6 @@ fn fibonacci(n:u64) -> u64 {
         n => fibonacci(n-1) + fibonacci(n-2)
     }
 }
+
+
+
